@@ -14,7 +14,7 @@ from dataclasses import dataclass, field
 from typing import Optional
 import numpy as np
 
-from src.fluids.properties import Fluid
+from pipeline_hydraulics.fluids.properties import Fluid
 
 
 @dataclass

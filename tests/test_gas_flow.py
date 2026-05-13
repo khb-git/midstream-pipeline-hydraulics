@@ -12,7 +12,7 @@ checking:
 import numpy as np
 import pytest
 
-from src.hydraulics.gas_flow import weymouth_flow, panhandle_b_flow
+from pipeline_hydraulics.hydraulics.gas_flow import weymouth_flow, panhandle_b_flow
 
 
 class TestWeymouth:

@@ -14,7 +14,7 @@ total pressure drop and can even produce pressure recovery.
 from dataclasses import dataclass
 import numpy as np
 
-from src.hydraulics.friction import friction_factor, reynolds_number
+from pipeline_hydraulics.hydraulics.friction import friction_factor, reynolds_number
 
 
 GRAVITY = 9.80665  # Standard gravity (m/s²)
@@ -104,7 +104,7 @@ def darcy_weisbach(
     h_loss = dp_total / (density * GRAVITY)
 
     # Classify flow regime
-    from src.hydraulics.friction import RE_LAMINAR_MAX, RE_TURBULENT_MIN
+    from pipeline_hydraulics.hydraulics.friction import RE_LAMINAR_MAX, RE_TURBULENT_MIN
     if re < RE_LAMINAR_MAX:
         regime = "laminar"
     elif re < RE_TURBULENT_MIN:

@@ -11,7 +11,7 @@ Validates against:
 import numpy as np
 import pytest
 
-from src.hydraulics.friction import (
+from pipeline_hydraulics.hydraulics.friction import (
     reynolds_number,
     friction_factor_laminar,
     friction_factor_colebrook,

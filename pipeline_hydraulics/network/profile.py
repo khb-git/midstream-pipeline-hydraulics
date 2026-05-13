@@ -14,8 +14,8 @@ from typing import Optional
 import numpy as np
 import pandas as pd
 
-from src.network.pipeline import Pipeline
-from src.hydraulics.pressure_drop import darcy_weisbach
+from pipeline_hydraulics.network.pipeline import Pipeline
+from pipeline_hydraulics.hydraulics.pressure_drop import darcy_weisbach
 
 
 @dataclass

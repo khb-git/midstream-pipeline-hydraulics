@@ -13,7 +13,7 @@ on internal consistency and physical limits.
 import numpy as np
 import pytest
 
-from src.hydraulics.pressure_drop import (
+from pipeline_hydraulics.hydraulics.pressure_drop import (
     darcy_weisbach,
     velocity_from_flow_rate,
     GRAVITY,

@@ -8,8 +8,8 @@ to be design-accurate replicas of specific operating pipelines.
 
 import numpy as np
 
-from src.fluids.properties import WTI_CRUDE, WCS_HEAVY, GASOLINE
-from src.network.pipeline import Pipeline, PipeSegment, PumpStation
+from pipeline_hydraulics.fluids.properties import WTI_CRUDE, WCS_HEAVY, GASOLINE
+from pipeline_hydraulics.network.pipeline import Pipeline, PipeSegment, PumpStation
 
 
 def cushing_to_houston_example() -> Pipeline:

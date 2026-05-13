@@ -42,9 +42,9 @@ total pumping power required.
 ## Quick start
 
 ```python
-from src.io.examples import cushing_to_houston_example
-from src.network.profile import compute_profile
-from src.viz.gradient import plot_hydraulic_gradient
+from pipeline_hydraulics.io.examples import cushing_to_houston_example
+from pipeline_hydraulics.network.profile import compute_profile
+from pipeline_hydraulics.viz.gradient import plot_hydraulic_gradient
 
 # Load a pre-configured example pipeline
 pipeline = cushing_to_houston_example()
@@ -74,7 +74,7 @@ pytest
 
 ```
 midstream-pipeline-hydraulics/
-├── src/
+├── pipeline_hydraulics/
 │   ├── hydraulics/
 │   │   ├── friction.py          # Colebrook-White, Swamee-Jain
 │   │   ├── pressure_drop.py     # Darcy-Weisbach (liquid)

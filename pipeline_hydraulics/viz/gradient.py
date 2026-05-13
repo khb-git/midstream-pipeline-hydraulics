@@ -18,8 +18,8 @@ import matplotlib.pyplot as plt
 from matplotlib.figure import Figure
 from matplotlib.patches import Rectangle
 
-from src.network.profile import HydraulicProfile
-from src.network.pipeline import Pipeline
+from pipeline_hydraulics.network.profile import HydraulicProfile
+from pipeline_hydraulics.network.pipeline import Pipeline
 
 
 PLOT_STYLE = {

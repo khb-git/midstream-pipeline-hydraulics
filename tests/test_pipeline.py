@@ -9,10 +9,10 @@ calculations. Also verify that pump stations correctly restore pressure.
 import numpy as np
 import pytest
 
-from src.fluids.properties import WTI_CRUDE, WATER
-from src.network.pipeline import Pipeline, PipeSegment, PumpStation
-from src.network.profile import compute_profile
-from src.hydraulics.pressure_drop import darcy_weisbach
+from pipeline_hydraulics.fluids.properties import WTI_CRUDE, WATER
+from pipeline_hydraulics.network.pipeline import Pipeline, PipeSegment, PumpStation
+from pipeline_hydraulics.network.profile import compute_profile
+from pipeline_hydraulics.hydraulics.pressure_drop import darcy_weisbach
 
 
 class TestPipelineConstruction:
@@ -114,7 +114,7 @@ class TestProfileViolations:
 
 class TestExamples:
     def test_cushing_houston_example_runs(self):
-        from src.io.examples import cushing_to_houston_example
+        from pipeline_hydraulics.io.examples import cushing_to_houston_example
         pipe = cushing_to_houston_example()
         profile = compute_profile(pipe, flow_rate_m3_s=0.5)  # ~270k bpd
         # Should produce a valid profile
@@ -122,7 +122,7 @@ class TestExamples:
         assert profile.outlet_pressure_pa > 0
 
     def test_short_products_line_runs(self):
-        from src.io.examples import short_products_line
+        from pipeline_hydraulics.io.examples import short_products_line
         pipe = short_products_line()
         profile = compute_profile(pipe, flow_rate_m3_s=0.05)
         assert profile.outlet_pressure_pa > 0
